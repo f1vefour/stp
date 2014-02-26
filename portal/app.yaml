@@ -1,0 +1,9 @@
+application: sessionteleporter # Change if running your own
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /.*
+  script: portal.portalapp

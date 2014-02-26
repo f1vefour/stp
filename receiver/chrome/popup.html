@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <meta charset="utf-8"> 
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      min-width: 250px;
+      font: 14px/16px sans-serif;
+      padding: 1em;
+      margin: 0;
+    }
+    h2 { font-size: 120%; }
+    input[type="text"], button { padding: 0.3em; }
+
+    #key { width: 100%; }
+
+  </style>
+
+  <h2>Enter key to open session:</h2>
+  <form>
+  <p><input id="key" type="text"
+      placeholder="e.g. abcdefghijl/mnopqerst"></p>
+  <p>
+    <button id="open" type="submit">Open Session</button>
+    <span id="msg"></span>
+  </p>
+  </form>
+
+  <script src="sjcl.js"></script>
+  <script src="main.js"></script>
+
+</html>
+

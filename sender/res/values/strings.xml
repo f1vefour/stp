@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Session Teleporter</string>
+    <string name="action_teleport">Teleport</string>
+    <string name="enter_url">Enter URL</string>
+    <string name="teleport_failed">Teleporatation failed! Try again.</string>
+    <string name="error">ERROR</string>
+    <string name="enter_key">Enter key below in browser</string>
+    <string name="teleport_wait">Teleporting your session</string>
+    <string name="no_session">No session to teleport. Login first.</string>
+    <string name="only_http">Only http(s) URLs are accepted</string>
+
+</resources>

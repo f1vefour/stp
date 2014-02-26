@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="config_portal_url">http://sessionteleporter.appspot.com/d/</string>
+    <string name="config_key_iter">4000</string>
+    <string name="config_key_len">256</string>
+    <string name="config_pass_len">10</string>
+    <string name="config_pass_chars">abcdefghijklmnopqrstuvwxyz-.</string>
+    <string name="config_iv_len">13</string>
+    <string name="config_salt_len">13</string>
+    <string name="config_max_portal_id_len">20</string>
+    <string name="config_user_agent">Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36</string>
+
+</resources>
