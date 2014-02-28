@@ -15,9 +15,6 @@ def _set(k, v):
 def _get(k):
   return memcache.get(k)
 
-def _del(k):
-  memcache.delete(k)
-
 def portalapp(environ, start_response):
 
   headers = [('Content-Type', 'text/plain; charset=UTF-8')]
@@ -41,7 +38,6 @@ def portalapp(environ, start_response):
     key = path[3:]
     value = _get(key)
     if value is not None:
-      _del(key)
       start_response('200 OK', headers)
       return [value]
 
