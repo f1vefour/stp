@@ -26,7 +26,8 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
-  private static final Pattern DOMAIN_PAT = Pattern.compile("https?://([^/]+)");
+  private static final Pattern DOMAIN_PAT = Pattern
+      .compile("(https?://)([^/]+)");
 
   private WebView browser;
   private EditText addressBar;
@@ -116,8 +117,8 @@ public class MainActivity extends Activity {
           return super.onMenuItemSelected(featureId, item);
         }
         String cookieDomain = null;
-        String curDomain = m.group(1);
-        String curCookies = cm.getCookie(curDomain);
+        String curDomain = m.group(2);
+        String curCookies = cm.getCookie(m.group(1) + curDomain + "/");
 
         while (curCookies != null) {
 
@@ -129,7 +130,7 @@ public class MainActivity extends Activity {
           int dotIndex = curDomain.indexOf('.');
           dotIndex = dotIndex == -1 ? curDomain.length() : dotIndex;
           curDomain = curDomain.substring(dotIndex + 1);
-          curCookies = cm.getCookie(curDomain);
+          curCookies = cm.getCookie(m.group(1) + curDomain + "/");
 
         }
 
@@ -143,9 +144,9 @@ public class MainActivity extends Activity {
 
           teleport(url, cookieDomain, serCookies.toString());
           return true;
-          
+
         }
-        
+
       }
       Toast.makeText(this, getString(R.string.no_session), Toast.LENGTH_SHORT)
           .show();
